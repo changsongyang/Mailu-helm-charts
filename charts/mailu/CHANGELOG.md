@@ -1,5 +1,47 @@
 # Changelog
 
+## [2.9.0](https://github.com/changsongyang/Mailu-helm-charts/compare/mailu-2.8.0...mailu-2.9.0) (2026-09-20)
+
+
+### Features
+
+* allow defining ipFamilyPolicy for external service ([#362](https://github.com/changsongyang/Mailu-helm-charts/issues/362)) ([924cc54](https://github.com/changsongyang/Mailu-helm-charts/commit/924cc540f0a6ae3c1ecc72329395fc10bd5b79ca))
+* **chart:** add dnsPolicy and dnsConfig options for postfix ([#609](https://github.com/changsongyang/Mailu-helm-charts/issues/609)) ([43620b2](https://github.com/changsongyang/Mailu-helm-charts/commit/43620b23a3b5f1bb4c3e0ede2ef875bb3292c998))
+* **externalService:** allow to set labels ([#470](https://github.com/changsongyang/Mailu-helm-charts/issues/470)) ([e906264](https://github.com/changsongyang/Mailu-helm-charts/commit/e906264e6765d3ad1ea8daf9cfa9e9149518ba9c)), closes [#275](https://github.com/changsongyang/Mailu-helm-charts/issues/275)
+* support mta-sts configuration with overrides ([#396](https://github.com/changsongyang/Mailu-helm-charts/issues/396)) ([051c3b2](https://github.com/changsongyang/Mailu-helm-charts/commit/051c3b21208658915469e276cf6941a147b3a59d))
+
+
+### Bug Fixes
+
+* Allow set externalIPs ([#499](https://github.com/changsongyang/Mailu-helm-charts/issues/499)) ([b30a1a3](https://github.com/changsongyang/Mailu-helm-charts/commit/b30a1a32c43aea7618c471fe3154e28e13026dcd))
+* **chart:** correct dovecot PVC existingClaim guard ([#608](https://github.com/changsongyang/Mailu-helm-charts/issues/608)) ([65ef0dd](https://github.com/changsongyang/Mailu-helm-charts/commit/65ef0dd37bb984430fbfdad4b957fd891cf86af0))
+* **chart:** write wget output to /dev/null in the test hook ([#611](https://github.com/changsongyang/Mailu-helm-charts/issues/611)) ([9675f57](https://github.com/changsongyang/Mailu-helm-charts/commit/9675f572c9d2bb26c7b8a51582b93309b47081dc))
+* clamav volumeClaimTemplates use matchLabels ([#522](https://github.com/changsongyang/Mailu-helm-charts/issues/522)) ([fa88206](https://github.com/changsongyang/Mailu-helm-charts/commit/fa88206e531d7e5e4e937f26809a0ccf1480bae2))
+* **container:** update image docker.io/apache/tika ( 3.2.2.0 ➔ 3.2.3.0 ) ([#465](https://github.com/changsongyang/Mailu-helm-charts/issues/465)) ([995b7eb](https://github.com/changsongyang/Mailu-helm-charts/commit/995b7eb67985d2e1004c39fed0adf7d61d0c6b4a))
+* **docs:** readme OCD ([#381](https://github.com/changsongyang/Mailu-helm-charts/issues/381)) ([6147f84](https://github.com/changsongyang/Mailu-helm-charts/commit/6147f8495ceef6bfa789b4e11cb2dbbdb74f8276))
+* Don't set empty vars instead of setting them to empty strings ([#475](https://github.com/changsongyang/Mailu-helm-charts/issues/475)) ([9ddb8b8](https://github.com/changsongyang/Mailu-helm-charts/commit/9ddb8b82d2493ceaced510f3e37b7d5e5765ed37))
+* ensure PORTS value is quoted ([#515](https://github.com/changsongyang/Mailu-helm-charts/issues/515)) ([2d3ce2d](https://github.com/changsongyang/Mailu-helm-charts/commit/2d3ce2d82455bcaaa57dc81c2259a21ec2869a42))
+* **gh-actions lint-and-test:** correct indentation ([#492](https://github.com/changsongyang/Mailu-helm-charts/issues/492)) ([a03411d](https://github.com/changsongyang/Mailu-helm-charts/commit/a03411d19b6ebfb466187178b0aa90dd7f6d20fc)), closes [#490](https://github.com/changsongyang/Mailu-helm-charts/issues/490)
+* **github-release:** update release mailu/mailu ( 2024.06.43 ➔ 2024.06.44 ) ([ab06eb6](https://github.com/changsongyang/Mailu-helm-charts/commit/ab06eb643829c869d8aea9756aefccf732129924))
+* **github-release:** update release mailu/mailu ( 2024.06.44 ➔ 2024.06.45 ) ([#504](https://github.com/changsongyang/Mailu-helm-charts/issues/504)) ([40479b4](https://github.com/changsongyang/Mailu-helm-charts/commit/40479b4e8af7a47b8cda74cff1d8220fca66abe6))
+* **github-release:** update release mailu/mailu ( 2024.06.45 ➔ 2024.06.46 ) ([#534](https://github.com/changsongyang/Mailu-helm-charts/issues/534)) ([353a7c7](https://github.com/changsongyang/Mailu-helm-charts/commit/353a7c72ebba6a76ae145924259e51638af32db3))
+* **github-release:** update release mailu/mailu ( 2024.06.46 ➔ 2024.06.47 ) ([#547](https://github.com/changsongyang/Mailu-helm-charts/issues/547)) ([a7fbe40](https://github.com/changsongyang/Mailu-helm-charts/commit/a7fbe40894177ed22f686ae74f8897cfd5b2980b))
+* **github-release:** update release mailu/mailu ( 2024.06.47 ➔ 2024.06.48 ) ([#553](https://github.com/changsongyang/Mailu-helm-charts/issues/553)) ([3047a10](https://github.com/changsongyang/Mailu-helm-charts/commit/3047a10efcd7039249ee21a98550ccc41570d29d))
+* **github-release:** update release mailu/mailu ( 2024.06.48 ➔ 2024.06.49 ) ([#555](https://github.com/changsongyang/Mailu-helm-charts/issues/555)) ([9ba8ece](https://github.com/changsongyang/Mailu-helm-charts/commit/9ba8ece0b9d1b60df7b2308c1b9c44d3855cc8b5))
+* **github-release:** update release mailu/mailu ( 2024.06.49 ➔ 2024.06.50 ) ([#565](https://github.com/changsongyang/Mailu-helm-charts/issues/565)) ([df52add](https://github.com/changsongyang/Mailu-helm-charts/commit/df52add4fdf50ecda48b2282943d34aa0bd6116d))
+* **github-release:** update release mailu/mailu ( 2024.06.50 ➔ 2024.06.51 ) ([#568](https://github.com/changsongyang/Mailu-helm-charts/issues/568)) ([d4c28e9](https://github.com/changsongyang/Mailu-helm-charts/commit/d4c28e943ce9d603bc4e7b8de3ce452f2496e9f3))
+* **github-release:** update release mailu/mailu ( 2024.06.51 ➔ 2024.06.52 ) ([#573](https://github.com/changsongyang/Mailu-helm-charts/issues/573)) ([8a59cb6](https://github.com/changsongyang/Mailu-helm-charts/commit/8a59cb65ab0f704c5769749f8e90f41045c465a3))
+* **github-release:** update release mailu/mailu ( 2024.06.52 ➔ 2024.06.53 ) ([#583](https://github.com/changsongyang/Mailu-helm-charts/issues/583)) ([297bfb2](https://github.com/changsongyang/Mailu-helm-charts/commit/297bfb2a6a79f52b9e8ad4876ebdd48cdb1a1d57))
+* **github-release:** update release mailu/mailu ( 2024.06.53 ➔ 2024.06.54 ) ([#584](https://github.com/changsongyang/Mailu-helm-charts/issues/584)) ([8e86411](https://github.com/changsongyang/Mailu-helm-charts/commit/8e864118459f15a5e39341f2872141451e62a941))
+* **github-release:** update release mailu/mailu ( 2024.06.55 ➔ 2024.06.56 ) ([#593](https://github.com/changsongyang/Mailu-helm-charts/issues/593)) ([0a03647](https://github.com/changsongyang/Mailu-helm-charts/commit/0a0364783ac1d1dd5a23aa2849fd59556f8a5c9b))
+* **github-release:** update release mailu/mailu ( 2024.06.56 ➔ 2024.06.57 ) ([#595](https://github.com/changsongyang/Mailu-helm-charts/issues/595)) ([10212f6](https://github.com/changsongyang/Mailu-helm-charts/commit/10212f646fe2687751442d9aaa8b10e3f6953238))
+* **github-release:** update release mailu/mailu ( 2024.06.57 ➔ 2024.06.58 ) ([#601](https://github.com/changsongyang/Mailu-helm-charts/issues/601)) ([663eb5f](https://github.com/changsongyang/Mailu-helm-charts/commit/663eb5ffcfdc7c4831bb6fa4df0b6758dda8623e))
+* **ingress:** terminate HTTP TLS at external ingress. ([#605](https://github.com/changsongyang/Mailu-helm-charts/issues/605)) ([d1624d0](https://github.com/changsongyang/Mailu-helm-charts/commit/d1624d0578060cef7d00e08e41410630099124f1))
+* prevent overzealous whitespace removal ([#509](https://github.com/changsongyang/Mailu-helm-charts/issues/509)) ([5a65b6b](https://github.com/changsongyang/Mailu-helm-charts/commit/5a65b6b2609d3beb3625fd2556f94fc5429ffede)), closes [#508](https://github.com/changsongyang/Mailu-helm-charts/issues/508)
+* **serviceMonitor:** labelSelector declaration ([#472](https://github.com/changsongyang/Mailu-helm-charts/issues/472)) ([3b03faa](https://github.com/changsongyang/Mailu-helm-charts/commit/3b03faa3c3df7e9ff5915bd8d30a42d1d1491562)), closes [#471](https://github.com/changsongyang/Mailu-helm-charts/issues/471)
+* type of db ExtraEnvVars values ([#466](https://github.com/changsongyang/Mailu-helm-charts/issues/466)) ([64a068d](https://github.com/changsongyang/Mailu-helm-charts/commit/64a068d5171d69d02d4587fd948cd4d2abca0af9))
+* update mailu ([#587](https://github.com/changsongyang/Mailu-helm-charts/issues/587)) ([86936bd](https://github.com/changsongyang/Mailu-helm-charts/commit/86936bda6ef674aad17948619a1e58a989f5c958))
+
 ## [2.8.0](https://github.com/Mailu/helm-charts/compare/mailu-2.7.3...mailu-2.8.0) (2026-09-19)
 
 
